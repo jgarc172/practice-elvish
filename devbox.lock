@@ -1,0 +1,25 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "elvish@latest": {
+      "last_modified": "2023-12-13T22:54:10Z",
+      "resolved": "github:NixOS/nixpkgs/fd04bea4cbf76f86f244b9e2549fca066db8ddff#elvish",
+      "source": "devbox-search",
+      "version": "0.19.2",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/m1m7i0a7qyvvh86mgyyylm8fmzng218w-elvish-0.19.2"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/65fhrpyy6rki33ahrdmjb81xn6k7ix7a-elvish-0.19.2"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/bfmi2xf2zmibzj8xr11dc21h0r5blp3r-elvish-0.19.2"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/rnfsg2carqg6zaqp84scgmvyq0kmqqjg-elvish-0.19.2"
+        }
+      }
+    }
+  }
+}
