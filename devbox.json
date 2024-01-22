@@ -1,5 +1,8 @@
 {
-  "packages": ["elvish@latest"],
+  "packages": [
+    "elvish@latest",
+    "go@latest"
+  ],
   "shell": {
     "init_hook": [
       "echo 'Welcome to devbox!' > /dev/null"
