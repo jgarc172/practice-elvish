@@ -4,12 +4,12 @@ use str
 fn last2 { |p|
   var dir-count = (str:split / $p | count)
   if (> $dir-count 3) {
-    echo ../(path:join (path:base (path:dir $p)) (path:base $p))
+    put ../(path:join (path:base (path:dir $p)) (path:base $p))
   } else {
-    echo $p
+    put $p
   }
 }
 
 fn prom { 
-  echo (styled λ green) (last2 (put $pwd)) (styled '> ' green)
+  styled 'λ ' green; last2 (put $pwd); styled ' > ' green
 }
