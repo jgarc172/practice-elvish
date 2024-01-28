@@ -36,16 +36,16 @@ fn git-porcelain {
 fn git-map {
   var git = [&]
   var status = ?(var lines = [(put (git status --branch --porcelain=v2 2>/dev/null))])
-  #each {|line| echo $line } $lines
-  if (eq $status $ok) { each {|line| put $line } $lines } | each {|line|
-    var type key @value = (str:split ' ' $line)
-    if (eq $type '#' ) {
-      #set git = (assoc $git $key (str:join ' ' $value))
-      set git[$key] = $value
-    }
-    if (or (eq $type '?') (eq $type '1')) {
-      set git[dirty] = $true
-    }
+  if (eq $status $ok) {
+    set git[dirty] = $false
+    each {|line| put $line } $lines } | each {|line|
+      var type key @value = (str:split ' ' $line)
+      if (eq $type '#' ) {
+        set git[$key] = $value
+      }
+      if (or (eq $type '?') (eq $type '1')) {
+        set git[dirty] = $true
+      }
   }
   put $git
 }
