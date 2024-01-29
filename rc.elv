@@ -68,6 +68,14 @@ if (> (count $gm) 0) {
 var start = (styled 'λ ' green)
 var end = (styled ' > ' green)
 fn dir  { last1 $pwd }
+
 fn prom { 
   put $start (styled (dir) yellow bold)'/ ' (git-status) $end 
 }
+
+fn rprom {
+  put (git-status)
+}
+
+set edit:prompt = { prom }
+set edit:rprompt = { }
